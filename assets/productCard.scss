@@ -1,0 +1,108 @@
+.card {
+    // border: 3px solid red;
+  
+}
+
+.card .cardImage {
+    height: 480px;
+    width: 98.5%;
+    background-image: url(../static/back2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 12px;
+   
+}
+
+.cardImage .content {
+//    border: 2px solid red;
+   margin-left: 20px;
+   width: fit-content;
+   text-align: center;
+   margin-top: 109px;
+   
+
+
+}
+
+.cardImage .content h1 .sp1 {
+    // border: 2px solid rgb(76, 0, 255);
+    color: rgb(16, 16, 54);
+    font-size: 2.3rem !important;
+    align-items: center;
+    display: block;
+   
+}
+
+.cardImage .content h1 {
+    // border: 2px solid red;
+    font-size: 3.9rem;
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+.cardImage .content h1 .sp2 {
+    
+    color: white;
+    font-size: 1.5rem !important;
+    text-align: center;
+    display: block;
+}
+.cardImage .content button {
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    background-color: hsl(51, 96%, 51%);
+    border: black 2px solid;
+    padding: 10px;
+    font-weight: bold;
+    align-items: center;
+    width: 10rem;
+    // margin-left: 17%;
+    // margin-left: 20%;
+}
+
+.cardImage .gfsec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+    margin-top: 42px;
+    color: #fff;
+    text-align: center;
+}
+
+.gfsec,
+.gf2,
+.gf3,
+.gf4 {
+    display: flex;
+}
+
+.gf2,
+.gf3,
+.gf4 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    // border: 2px solid blue;
+    margin-left: 30px;
+}
+.gf2,
+.gf3,
+.gf4 p{
+    text-align: center;
+}
+
+// .gf4 {
+//     justify-content: end;
+// }
+
+.gfsec span {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    opacity: 80%;
+}
