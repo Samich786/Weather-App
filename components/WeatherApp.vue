@@ -24,47 +24,47 @@
 
 
                 <a-row class="mt-5">
-                    <a-col class="data-detail" :span="6" :offset="9">
+                    <a-col class="data-detail" :span="6"  :offset="9">
 
                         <a-row class="mt-2 ml-2" type="flex" justify="space-between">
                             <a-col :span="14">
                                 {{ weatherDetails.name }},{{ weatherDetails.country }}
                             </a-col>
-                            <a-col :span="10">
+                            <a-col :span="10" >
                                 <h3 class="text-center">{{ weatherDetails.description }} </h3>
                             </a-col>
                         </a-row>
                         <a-row class="mt-3" type="flex" justify="center">
-                            <a-col v-show="truevalue" :span="8">
+                            <a-col v-show="truevalue" :span="8" >
                                 <h4>Humidity </h4>
                             </a-col>
-                            <a-col v-show="truevalue" :span="6">
+                            <a-col v-show="truevalue" :span="6" >
                                 <h4>Cloudy</h4>
                             </a-col>
-                            <a-col v-show="truevalue" :span="8">
+                            <a-col v-show="truevalue" :span="8" >
                                 <h4>Wind Speed </h4>
                             </a-col>
                         </a-row>
                         <a-row v-show="truevalue" class="" type="flex" justify="center">
-                            <a-col :span="8" :offset="2">
+                            <a-col :span="8"  :offset="2">
                                 <h4>{{ weatherDetails.humidity }}</h4>
                             </a-col>
-                            <a-col :span="6">
+                            <a-col :span="6" >
                                 <h4> {{ weatherDetails.clouds }}%</h4>
                             </a-col>
-                            <a-col :span="8">
+                            <a-col :span="8" >
                                 <h4> {{ weatherDetails.speed }}m/s</h4>
                             </a-col>
                         </a-row>
                         <a-row v-show="truevalue">
-                            <a-col :span="12">
+                            <a-col :span="12" >
                                 <h1 class="font-size ml-2 text-center">{{ (weatherDetails.temp - weatherDetails.temp %
                                 1) - 273}}'C</h1>
                             </a-col>
-                            <a-col :span="12">
-                                <img class="mt-4" v-show="cloudvalue" src="../static/cloudy.png" alt="" width="50px" />
-                                <img class="mt-4" v-show="hazevalue" src="../static/haze.png" alt="" width="50px" />
-                                <img class="mt-4" v-show="sunvalue" src="../static/sun.png" alt="" width="50px" />
+                            <a-col :span="10">
+                                <img class=" ml-3" v-show="cloudvalue" src="../static/cloudy.png" alt="" width="50px" />
+                                <img class=" ml-3" v-show="hazevalue" src="../static/haze.png" alt="" width="50px" />
+                                <img class=" ml-3" v-show="sunvalue" src="../static/sun.png" alt="" width="50px" />
                             </a-col>
                         </a-row>
 
@@ -188,7 +188,9 @@ body {
     height: 100vh;
     width: 100%;
 }
-
+img{
+    margin-top: 1.5rem;
+}
 p,
 h1,
 h3,
@@ -226,6 +228,71 @@ header {
     width: 30%;
     height: 40vh;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .data-detail {
+    background: black;
+    color: white;
+    width: 38%;
+    height: 30vh;
+    border-radius: 10px;
+}
+.main {
+    background: white;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+p,
+h1,
+h3,
+h4 {
+    color: white;
+    font-size: 6px;
+}
+.font-size{
+    font-size:2rem !important;
+    font-weight: bold !important;
+  }
+  img{
+    width:30px !important;
+    margin-top: 10px !important;
+  }
+}
+  @media screen and (max-width: 1200px ) and(  min-width: 701px) {
+    .data-detail {
+    background: black;
+    color: white;
+    width: 30%;
+    height: 30vh;
+    border-radius: 10px;
+}
+.main {
+    background: white;
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+}
+
+p,
+h1,
+h3,
+h4 {
+    color: white;
+    font-size: 10px;
+}
+.font-size{
+    font-size:3rem !important;
+    font-weight: bold !important;
+  }
+  img{
+    width:40px !important;
+    margin-top: 1rem;
+  }
+
+
 }
 
 </style>
